@@ -21,6 +21,8 @@ function makeGrid(row,col) {
           $('tr:last').append("<td></td>");
           $('td').attr("class", 'pixels');
       }
+   }
+}
 
 // to add a color picker
 $('.pixels').click(function (instance) {
@@ -28,4 +30,3 @@ $('.pixels').click(function (instance) {
   $(event.target).css('background-color', brush);
 });
 
-}
