@@ -2,9 +2,9 @@
 // Select size input
 
 // When size is submitted by the user, call makeGrid()
-$('#sizePicker').submit(function makeGrid(instance) {
+$('#sizePicker').submit(function makeGrid(event) {
 
-  instance.preventDefault();
+  event.preventDefault();
   var row = $('#inputHeight').val();
   var col = $('#inputWidth').val();
   makeGrid(row,col);
@@ -22,11 +22,12 @@ function makeGrid(row,col) {
           $('td').attr("class", 'pixels');
       }
    }
-}
 
 // to add a color picker
-$('.pixels').click(function (instance) {
+$('.pixels').click(function (event) {
   var brush = $('#colorPicker').val();
   $(event.target).css('background-color', brush);
 });
+  
 
+}
